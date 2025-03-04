@@ -326,6 +326,17 @@ class Mapper:
         if False:
             if len(valid_convoys):
                 valid_convoys = valid_convoys[0:1]
+
+        # draw hold at destination unit if got attacked
+        # FIXME - if the destination unit is attacked multiple times, this leads to multiple circles being drawn.
+        order: Move = unit.order
+        destunit = order.destination.get_unit()
+        if destunit:
+            destorder = destunit.order
+            if isinstance(destorder, (ConvoyTransport, Support)):
+                for coord in destunit.location().all_locs:
+                    self._draw_hold(coord)
+
         valid_convoys = self.get_shortest_paths(valid_convoys)
         for path in valid_convoys:
             p = [coordinate]
@@ -371,25 +382,25 @@ class Mapper:
         v3 = self.loc_to_point(order.destination, v2)
         x3, y3 = v3
         marker_start = ""
-        if order.destination.get_unit():
+
+        destunit = order.destination.get_unit()
+        if destunit:
+            destorder = destunit.order
+
             if order.source.location() == order.destination:
                 (x3, y3) = self.pull_coordinate((x1, y1), (x3, y3), self.board.data["svg config"]["unit_radius"])
             else:
                 (x3, y3) = self.pull_coordinate((x2, y2), (x3, y3))
-            if isinstance(order.destination.get_unit().order, (ConvoyTransport, Support)):
-                for coord in order.destination.all_locs:
-                    self._draw_hold(coord)
-            # if two units are support-holding each other
-            destorder = order.destination.get_unit().order
 
+            # if two units are support-holding each other
             if (
-                isinstance(order.destination.get_unit().order, Support)
+                isinstance(destorder, Support)
                 and destorder.source.location() == destorder.destination == unit.location()
                 and order.source.location() == order.destination
             ):
                 # This check is so we only do it once, so it doesn't overlay
                 # it doesn't matter which one is the origin & which is the dest
-                if id(order.destination.get_unit()) > id(unit):
+                if id(destunit) > id(unit):
                     marker_start = "url(#ball)"
                     # doesn't matter that v3 has been pulled, as it's still collinear
                     (x1, y1) = (x2, y2) = self.pull_coordinate(
