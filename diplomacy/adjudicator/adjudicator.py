@@ -30,7 +30,6 @@ from diplomacy.persistence.unit import UnitType, Unit
 
 logger = logging.getLogger(__name__)
 
-
 # TODO - move this somewhere that makes more sense
 def get_adjacent_provinces(location: Location) -> set[Province]:
     if isinstance(location, Coast):
@@ -38,7 +37,6 @@ def get_adjacent_provinces(location: Location) -> set[Province]:
     if isinstance(location, Province):
         return location.adjacent
     raise ValueError(f"Location {location} should be Coast or Province")
-
 
 def get_destination_province_from_unit(unit: Unit) -> Province | None:
     if unit.order is None:
@@ -99,7 +97,7 @@ def convoy_is_possible(start: Province, end: Province, check_fleet_orders=False)
     return False
 
 
-def order_is_valid(location: Location, order: Order, strict_convoys_supports=False) -> tuple[bool, str | None]:
+def order_is_valid(location: Location, order: Order, strict_convoys_supports=False, strict_coast_movement=True) -> tuple[bool, str | None]:
     """
     Checks if order from given location is valid for configured board
 
@@ -107,6 +105,8 @@ def order_is_valid(location: Location, order: Order, strict_convoys_supports=Fal
     :param order: Order to check
     :param strict_convoys_supports: Defaults False. Validates only if supported order was also ordered,
                                     or convoyed unit was convoyed correctly
+    :param strict_coast_movement: Defaults True. Checks movement regarding coasts, should be false when checking 
+                                    for support holds.
 
     :return: tuple(result, reason)
         - bool result is True if the order is valid, False otherwise
@@ -137,14 +137,36 @@ def order_is_valid(location: Location, order: Order, strict_convoys_supports=Fal
         elif unit.unit_type == UnitType.FLEET:
             check = get_base_province_from_location(order.destination) in get_adjacent_provinces(location)
 
-            # FIXME currently adjacencies for coasts don't work properly, and allow for supporting from different coasts when necessary
-            # when this is fixed, please uncomment out tests test_6_b_3_variant, test_6_d_29, test_6_d_30 as they fail currently
+            source = location
+            destination = order.destination
+
+            # supports don't need to be strict
+            if strict_coast_movement:
+                if isinstance(source, Coast) and isinstance(destination, Coast):
+                    # coast to coast
+                    check = destination in source.get_adjacent_coasts()
+                elif isinstance(source, Coast) and isinstance(destination, Province):
+                    # coast to sea / island
+                    if destination.type == ProvinceType.LAND:
+                        return False, f"Fleet destination should be a coast"
+                    check = destination in source.adjacent_seas
+                elif isinstance(source, Province) and isinstance(destination, Coast):
+                    # sea / island to coast
+                    if source.type == ProvinceType.LAND:
+                        return False, f"Fleet source {source} should be a coast"
+                    check = source in destination.adjacent_seas
+                elif isinstance(source, Province) and isinstance(destination, Province):
+                    # if destination.type == ProvinceType.LAND:
+                    #     return False, f"Fleet destination should be a coast"
+                    # if source.type == ProvinceType.LAND:
+                    #     return False, f"Fleet source should be a coast"
+                    # sea / island to sea / island
+                    check = destination in source.adjacent
 
             if not check:
                 return False, f"{location.name} does not border {order.destination.name}"
         else:
             raise ValueError("Unknown type of unit. Something has broken in the bot. Please report this")
-
         if isinstance(order, RetreatMove) and destination_province.unit is not None:
             return False, "Cannot retreat to occupied provinces"
         return True, None
@@ -155,7 +177,7 @@ def order_is_valid(location: Location, order: Order, strict_convoys_supports=Fal
         if destination_province.type == ProvinceType.SEA:
             return False, "Cannot convoy to a sea space"
         if destination_province == unit.location():
-            return False, "Cannot convoy army to its previous space"
+            return False, "Cannot convoy army to its own space"
         return (
             convoy_is_possible(
                 get_base_province_from_location(location),
@@ -191,7 +213,7 @@ def order_is_valid(location: Location, order: Order, strict_convoys_supports=Fal
         if isinstance(order.source.order, Core) and order_is_valid(order.source.province, Core):
             return False, f"Cannot support a unit that is coring"
 
-        move_valid, _ = order_is_valid(location, Move(order.destination), strict_convoys_supports)
+        move_valid, _ = order_is_valid(location, Move(order.destination), strict_convoys_supports, False)
         if not move_valid:
             return False, f"Cannot support somewhere you can't move to"
 
@@ -349,7 +371,7 @@ class MovesAdjudicator(Adjudicator):
     def __init__(self, board: Board):
         super().__init__(board)
 
-        self.orders = set()
+        self.orders: set[AdjudicableOrder] = set()
 
         for unit in board.units:
             # Replace invalid orders with holds
@@ -453,15 +475,19 @@ class MovesAdjudicator(Adjudicator):
                     # We might have been dislodged by other move, but we shouldn't have been
                     order.source_province.dislodged_unit = None
                     order.base_unit.retreat_options = None
-                # Dislodge whatever is there
-                order.destination_province.dislodged_unit = order.destination_province.unit
+                # Dislodge whatever is there if it didn't move successfully
+                destination_unit = order.destination_province.unit
+
                 # TODO - remove provinces where a bounce occurred from retreat options
                 # TODO - remove sea provinces on the wrong coast too
                 # see DATC 4.A.5
-                if order.destination_province.dislodged_unit is not None:
-                    order.destination_province.dislodged_unit.retreat_options = order.destination_province.adjacent
+                if destination_unit is not None:
+                    print(destination_unit)
+                    destination_unit.retreat_options = order.destination_province.adjacent
                     if not order.is_convoy:
-                        order.destination_province.dislodged_unit.retreat_options -= {order.source_province}
+                        destination_unit.retreat_options -= {order.source_province}
+
+                order.destination_province.dislodged_unit = destination_unit
                 # Move us there
                 order.base_unit.province = order.destination_province
                 if isinstance(order.raw_destination, Coast):
@@ -495,6 +521,8 @@ class MovesAdjudicator(Adjudicator):
                 if unit.unit_type == UnitType.ARMY:
                     unit.retreat_options = {x for x in unit.retreat_options if x.type != ProvinceType.SEA}
                 else:
+                    print(unit.location())
+                    print([str(x) for x in get_adjacent_provinces(unit.location())])
                     unit.retreat_options &= get_adjacent_provinces(unit.location())
 
             # Update provinces again to capture SCs in fall where units held
