@@ -13,6 +13,7 @@ from discord import HTTPException
 from discord.ext import commands
 
 from bot import command
+from diplomacy.adjudicator.adjudicator import army_distance
 from diplomacy.persistence.manager import Manager
 
 intents = discord.Intents.default()
@@ -278,6 +279,51 @@ async def lock_orders(ctx: commands.Context) -> None:
 @bot.command(brief="re-enables orders")
 async def unlock_orders(ctx: commands.Context) -> None:
     await _handle_command(command.enable_orders, ctx)
+
+@bot.command(brief="wooollooo")
+async def distance(ctx: commands.Context) -> None:
+    await _handle_command(_distance, ctx)
+
+async def _distance(ctx: commands.Context, manager: Manager) -> str:
+    board = manager.get_board(ctx.guild.id)
+
+    a = ctx.message.content.removeprefix(".distance").strip()
+
+    p = board.get_location(a)
+    distance, lst = army_distance(p, lambda x: "Timbuktu" in x.name)
+    return f"The distance of {p.name} to Timbuktu is {distance} with the following path:\n {" -> ".join([x for x in lst])}"
+
+# async def _distance(ctx: commands.Context, manager: Manager) -> str:
+#     board = manager.get_board(ctx.guild.id)
+
+#     # a = ctx.message.content.removeprefix(".distance").strip()
+
+#     # p = board.get_location(a)
+#     # distance, lst = army_distance(p, lambda x: "Timbuktu" in x.name)
+#     d_p1_p2_lst = []
+#     distance = -1
+#     lst = None
+#     for pA in board.provinces:
+#         print(pA)
+#         if pA.type == ProvinceType.LAND:
+#             for pB in board.provinces:
+#                 if pA.name < pB.name:
+#                     pd, lst = army_distance(pA, lambda x: x == pB)
+#                     # if pd != None and pd > distance:
+#                     #     distance = pd
+#                     #     p_lst = None
+
+#                     if pd != None:
+#                         d_p1_p2_lst.append([pd, pA, pB, lst])
+
+#     d_p1_p2_lst.sort(key=lambda x: -x[0])
+
+#     for (d, pA, pB, lst) in d_p1_p2_lst[:10]:
+#         out += f"\n**{pA.name}** <-> **{pB.name}** ({d}): {" -> ".join([x for x in lst])}"
+
+#         # out += f"The distance of {p.name} to Timbuktu is {distance} with the following path:\n {" -> ".join([x for x in lst])}"
+
+#     return out
 
 
 @bot.command(brief="outputs information about the current game")

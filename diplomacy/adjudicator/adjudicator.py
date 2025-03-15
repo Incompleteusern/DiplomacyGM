@@ -1,6 +1,8 @@
 import abc
 import collections
+import copy
 import logging
+from typing import Callable
 
 from diplomacy.adjudicator.defs import (
     ResolutionState,
@@ -30,6 +32,7 @@ from diplomacy.persistence.unit import UnitType, Unit
 
 logger = logging.getLogger(__name__)
 
+
 # TODO - move this somewhere that makes more sense
 def get_adjacent_provinces(location: Location) -> set[Province]:
     if isinstance(location, Coast):
@@ -38,24 +41,44 @@ def get_adjacent_provinces(location: Location) -> set[Province]:
         return location.adjacent
     raise ValueError(f"Location {location} should be Coast or Province")
 
-def get_destination_province_from_unit(unit: Unit) -> Province | None:
-    if unit.order is None:
-        return None
-    if isinstance(unit.order, Hold) or isinstance(unit.order, Core):
-        return unit.province
-    try:
-        # noinspection PyUnresolvedReferences
-        destination: Location = unit.order.destination
-        return get_base_province_from_location(destination)
-    except AttributeError:
-        return None
 
 
-def get_source_province_from_unit(unit: Unit) -> Province:
-    order = unit.order
-    if issubclass(order.__class__, ComplexOrder):
-        return order.source.province
-    return unit.province
+def army_distance(start: Province, works: Callable[[Province], bool]) -> tuple[int | None, list[str]]:
+    """
+    Breadth-first search to figure out the distance between a province and the nearest province satisfying a condition,
+    returning None if no such distance exists.
+
+    :param start: Start province
+    :param end: End province
+    :param check_fleet_orders: if True, check that the fleets along the way are actually convoying the unit
+    :return: True if there are fleets connecting start -> end
+    """
+    visited: set[str] = set()
+    to_visit: collections.deque[tuple[Province, int, list[str]]] = collections.deque()
+
+    if works(start):
+        return 0, [start.name]
+
+    to_visit.append((start, 0, [start.name]))
+    while 0 < len(to_visit):
+        current, distance, lst = to_visit.popleft()
+
+        if current.name in visited:
+            continue
+        visited.add(current.name)
+
+        for adjacent_province in current.adjacent:
+            nl = lst.copy()
+            nl.append(adjacent_province.name)
+
+            if adjacent_province.type == ProvinceType.SEA:
+                continue
+            if works(adjacent_province):
+                return distance + 1, nl
+            else:
+                to_visit.append((adjacent_province, distance+1, nl))
+
+    return None, []
 
 
 def convoy_is_possible(start: Province, end: Province, check_fleet_orders=False) -> bool:

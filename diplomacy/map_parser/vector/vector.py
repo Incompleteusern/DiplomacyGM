@@ -69,13 +69,24 @@ class Parser:
         start = time.time()
 
         players = set()
+
         for name, data in self.data["players"].items():
             color = data["color"]
-            vscc = data["vscc"]
-            iscc = data["iscc"]
+            vscc = 16
+            iscc = 1
             player = Player(name, color, vscc, iscc, set(), set())
             players.add(player)
             self.color_to_player[color] = player
+
+
+
+        # for name, data in self.data["players"].items():
+        #     color = data["color"]
+        #     vscc = data["vscc"]
+        #     iscc = data["iscc"]
+        #     player = Player(name, color, vscc, iscc, set(), set())
+        #     players.add(player)
+        #     self.color_to_player[color] = player
 
         self.color_to_player[self.data["svg config"]["neutral"]] = None
         self.color_to_player[self.data["svg config"]["neutral_sc"]] = None
