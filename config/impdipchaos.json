@@ -219,1660 +219,1662 @@
     },
     "players": {
         "Christiania": {
-            "color": "ff2b28",
+            "color": "7cda8d",
             "vscc": 16,
             "iscc": 1
         },
         "Jamestown": {
-            "color": "bcbfff",
+            "color": "da005b",
             "vscc": 16,
             "iscc": 1
         },
         "Bahamas": {
-            "color": "7cffb2",
+            "color": "a95400",
             "vscc": 16,
             "iscc": 1
         },
         "New Amsterdam": {
-            "color": "b4f600",
+            "color": "007e1a",
             "vscc": 16,
             "iscc": 1
         },
         "Philadelphia": {
-            "color": "ffb20c",
+            "color": "5da284",
             "vscc": 16,
             "iscc": 1
         },
         "Portland": {
-            "color": "ab7d00",
+            "color": "f4000f",
             "vscc": 16,
             "iscc": 1
         },
         "Boston": {
-            "color": "00567f",
+            "color": "6834b1",
             "vscc": 16,
             "iscc": 1
         },
         "St. John's": {
-            "color": "a08fff",
+            "color": "3dd8ed",
             "vscc": 16,
             "iscc": 1
         },
         "Bermuda": {
-            "color": "cc0077",
+            "color": "656500",
             "vscc": 16,
             "iscc": 1
         },
         "Cap-Haitien": {
-            "color": "712f5b",
+            "color": "d09a00",
             "vscc": 16,
             "iscc": 1
         },
         "St. Augustine": {
-            "color": "ffc6c7",
+            "color": "734072",
             "vscc": 16,
             "iscc": 1
         },
         "Belize": {
-            "color": "2f80ff",
+            "color": "009e06",
             "vscc": 16,
             "iscc": 1
         },
         "Antigua": {
-            "color": "ffafd2",
+            "color": "c1cd83",
             "vscc": 16,
             "iscc": 1
         },
         "New Courland": {
-            "color": "ff5dda",
+            "color": "ff877e",
             "vscc": 16,
             "iscc": 1
         },
         "Parmurbo": {
-            "color": "c5da00",
+            "color": "514d80",
             "vscc": 16,
             "iscc": 1
         },
         "Cayenne": {
-            "color": "b554ff",
+            "color": "f0bd81",
             "vscc": 16,
             "iscc": 1
         },
         "Cordoba": {
-            "color": "01b17c",
+            "color": "b57a62",
             "vscc": 16,
             "iscc": 1
         },
         "Calama": {
-            "color": "144dff",
+            "color": "0050d4",
             "vscc": 16,
             "iscc": 1
         },
         "Islas Malvinas": {
-            "color": "3c6500",
+            "color": "d0bb00",
             "vscc": 16,
             "iscc": 1
         },
         "Asuncion": {
-            "color": "b1ffeb",
+            "color": "c9cc60",
             "vscc": 16,
             "iscc": 1
         },
         "Borora": {
-            "color": "a5e0ff",
+            "color": "ba0071",
             "vscc": 16,
             "iscc": 1
         },
         "Axura": {
-            "color": "ff4b63",
+            "color": "cd0024",
             "vscc": 16,
             "iscc": 1
         },
         "Chipaya": {
-            "color": "ec7a00",
+            "color": "7d8e00",
             "vscc": 16,
             "iscc": 1
         },
         "Quella Kollu": {
-            "color": "435400",
+            "color": "01df6a",
             "vscc": 16,
             "iscc": 1
         },
         "Caingangue": {
-            "color": "8f0f1e",
+            "color": "222df0",
             "vscc": 16,
             "iscc": 1
         },
         "Caracas": {
-            "color": "83271c",
+            "color": "b0c400",
             "vscc": 16,
             "iscc": 1
         },
         "Belem": {
-            "color": "ffda7a",
+            "color": "7017ce",
             "vscc": 16,
             "iscc": 1
         },
         "Amazon": {
-            "color": "663b3b",
+            "color": "007abd",
             "vscc": 16,
             "iscc": 1
         },
         "Madeira": {
-            "color": "8dfffd",
+            "color": "009247",
             "vscc": 16,
             "iscc": 1
         },
         "Japura": {
-            "color": "5f4b69",
+            "color": "64de7e",
             "vscc": 16,
             "iscc": 1
         },
         "Kalina": {
-            "color": "0061f9",
+            "color": "e500ec",
             "vscc": 16,
             "iscc": 1
         },
         "Cartagena": {
-            "color": "ff9257",
+            "color": "734924",
             "vscc": 16,
             "iscc": 1
         },
         "Hawai'i": {
-            "color": "d97700",
+            "color": "0246d9",
             "vscc": 16,
             "iscc": 1
         },
         "Galapagos": {
-            "color": "9a00b6",
+            "color": "fb00e8",
             "vscc": 16,
             "iscc": 1
         },
         "St. Helena": {
-            "color": "8db59c",
+            "color": "8e2971",
             "vscc": 16,
             "iscc": 1
         },
         "Tucapel": {
-            "color": "ffeb89",
+            "color": "843a55",
             "vscc": 16,
             "iscc": 1
         },
         "Chiloe": {
-            "color": "8e5c00",
+            "color": "e9c171",
             "vscc": 16,
             "iscc": 1
         },
         "Teushen": {
-            "color": "637000",
+            "color": "ff32ec",
             "vscc": 16,
             "iscc": 1
         },
         "Benguela": {
-            "color": "e0ffae",
+            "color": "86a500",
             "vscc": 16,
             "iscc": 1
         },
         "Reunion": {
-            "color": "e1ff4e",
+            "color": "ff1a9d",
             "vscc": 16,
             "iscc": 1
         },
         "Fort-Dauphin": {
-            "color": "f9008a",
+            "color": "0085b5",
             "vscc": 16,
             "iscc": 1
         },
         "Mauritsstad": {
-            "color": "ff83e6",
+            "color": "8ac7ff",
             "vscc": 16,
             "iscc": 1
         },
         "Mpemba": {
-            "color": "cdb2ff",
+            "color": "ff5fcb",
             "vscc": 16,
             "iscc": 1
         },
         "Pango": {
-            "color": "0083b3",
+            "color": "ff6a8a",
             "vscc": 16,
             "iscc": 1
         },
         "Soyo": {
-            "color": "00583f",
+            "color": "906dff",
             "vscc": 16,
             "iscc": 1
         },
         "Fernando Po": {
-            "color": "006a2e",
+            "color": "ff63e9",
             "vscc": 16,
             "iscc": 1
         },
         "Great Ardra": {
-            "color": "525c3b",
+            "color": "1749bb",
             "vscc": 16,
             "iscc": 1
         },
         "Cormantin": {
-            "color": "5535ff",
+            "color": "017dce",
             "vscc": 16,
             "iscc": 1
         },
         "Jacob Fort": {
-            "color": "b6003d",
+            "color": "6d81ff",
             "vscc": 16,
             "iscc": 1
         },
         "Cabo Verde": {
-            "color": "8c0f42",
+            "color": "377300",
             "vscc": 16,
             "iscc": 1
         },
         "Baidoa": {
-            "color": "fd0013",
+            "color": "ff50c7",
             "vscc": 16,
             "iscc": 1
         },
         "Hobyo": {
-            "color": "00bd39",
+            "color": "02aab9",
             "vscc": 16,
             "iscc": 1
         },
         "Mogadishu": {
-            "color": "b15300",
+            "color": "ff7161",
             "vscc": 16,
             "iscc": 1
         },
         "Beira": {
-            "color": "918000",
+            "color": "d100d1",
             "vscc": 16,
             "iscc": 1
         },
         "Maravi": {
-            "color": "6b3b00",
+            "color": "a30085",
             "vscc": 16,
             "iscc": 1
         },
         "Goa": {
-            "color": "7c2944",
+            "color": "01aa5b",
             "vscc": 16,
             "iscc": 1
         },
         "Surat": {
-            "color": "5d3d56",
+            "color": "ff987b",
             "vscc": 16,
             "iscc": 1
         },
         "Rajamahendri": {
-            "color": "8900f9",
+            "color": "355c22",
             "vscc": 16,
             "iscc": 1
         },
         "Hyderabad": {
-            "color": "66b200",
+            "color": "006743",
             "vscc": 16,
             "iscc": 1
         },
         "Cochin": {
-            "color": "47b300",
+            "color": "dcb2ff",
             "vscc": 16,
             "iscc": 1
         },
         "Madurai": {
-            "color": "165600",
+            "color": "a6023e",
             "vscc": 16,
             "iscc": 1
         },
         "Maldives": {
-            "color": "00af97",
+            "color": "e353ff",
             "vscc": 16,
             "iscc": 1
         },
         "Udni": {
-            "color": "a2ff13",
+            "color": "735600",
             "vscc": 16,
             "iscc": 1
         },
         "Pegu": {
-            "color": "b70d00",
+            "color": "005fd4",
             "vscc": 16,
             "iscc": 1
         },
         "Ava": {
-            "color": "f0f300",
+            "color": "ff7075",
             "vscc": 16,
             "iscc": 1
         },
         "Bhamo": {
-            "color": "b6c600",
+            "color": "7b00ec",
             "vscc": 16,
             "iscc": 1
         },
         "Kathmandu": {
-            "color": "0098a3",
+            "color": "4165ff",
             "vscc": 16,
             "iscc": 1
         },
         "Rinpungpa": {
-            "color": "00a0fd",
+            "color": "abd52a",
             "vscc": 16,
             "iscc": 1
         },
         "Andaman Islands": {
-            "color": "ffd59d",
+            "color": "80b700",
             "vscc": 16,
             "iscc": 1
         },
         "Masulipatam": {
-            "color": "1332c1",
+            "color": "ff97cc",
             "vscc": 16,
             "iscc": 1
         },
         "Madras": {
-            "color": "d4b799",
+            "color": "c1c0ff",
             "vscc": 16,
             "iscc": 1
         },
         "Ceylon": {
-            "color": "494269",
+            "color": "005f9e",
             "vscc": 16,
             "iscc": 1
         },
         "Muscat": {
-            "color": "394d29",
+            "color": "0066e9",
             "vscc": 16,
             "iscc": 1
         },
         "Ahmedabad": {
-            "color": "e54d00",
+            "color": "c86300",
             "vscc": 16,
             "iscc": 1
         },
         "Kabul": {
-            "color": "c1ffbb",
+            "color": "5c30c7",
             "vscc": 16,
             "iscc": 1
         },
         "Sasaram": {
-            "color": "92003a",
+            "color": "00c6b4",
             "vscc": 16,
             "iscc": 1
         },
         "Tabriz": {
-            "color": "ff823f",
+            "color": "45df94",
             "vscc": 16,
             "iscc": 1
         },
         "Herat": {
-            "color": "ff85bf",
+            "color": "ff5487",
             "vscc": 16,
             "iscc": 1
         },
         "Tehran": {
-            "color": "ff2ed7",
+            "color": "145e3e",
             "vscc": 16,
             "iscc": 1
         },
         "Bandar Abbas": {
-            "color": "c200d2",
+            "color": "4e42af",
             "vscc": 16,
             "iscc": 1
         },
         "Chiang Mai": {
-            "color": "8fc600",
+            "color": "076026",
             "vscc": 16,
             "iscc": 1
         },
         "Kunming": {
-            "color": "b0ff85",
+            "color": "285f03",
             "vscc": 16,
             "iscc": 1
         },
         "Chengdu": {
-            "color": "43b6ff",
+            "color": "f6bd4a",
             "vscc": 16,
             "iscc": 1
         },
         "Wuchang": {
-            "color": "fff72d",
+            "color": "00705d",
             "vscc": 16,
             "iscc": 1
         },
         "Nanjing": {
-            "color": "00c175",
+            "color": "e200b8",
             "vscc": 16,
             "iscc": 1
         },
         "Edo": {
-            "color": "72b1ff",
+            "color": "ebb1fe",
             "vscc": 16,
             "iscc": 1
         },
         "Osaka": {
-            "color": "407e00",
+            "color": "f493ff",
             "vscc": 16,
             "iscc": 1
         },
         "Aomori": {
-            "color": "0179e8",
+            "color": "9900c9",
             "vscc": 16,
             "iscc": 1
         },
         "Tavoy": {
-            "color": "374184",
+            "color": "b285b2",
             "vscc": 16,
             "iscc": 1
         },
         "Nakhon Si": {
-            "color": "01c49b",
+            "color": "883b32",
             "vscc": 16,
             "iscc": 1
         },
         "Hainan": {
-            "color": "ffc7e5",
+            "color": "afd437",
             "vscc": 16,
             "iscc": 1
         },
         "Phan Rang": {
-            "color": "ff39b8",
+            "color": "4f8300",
             "vscc": 16,
             "iscc": 1
         },
         "Zamboanga": {
-            "color": "0063ba",
+            "color": "ff78f2",
             "vscc": 16,
             "iscc": 1
         },
         "Dani": {
-            "color": "94ffd9",
+            "color": "c6c58c",
             "vscc": 16,
             "iscc": 1
         },
         "Flores": {
-            "color": "a5e400",
+            "color": "5e4881",
             "vscc": 16,
             "iscc": 1
         },
         "Batavia": {
-            "color": "d9b1cc",
+            "color": "3839d4",
             "vscc": 16,
             "iscc": 1
         },
         "Sumatra": {
-            "color": "776647",
+            "color": "69dba9",
             "vscc": 16,
             "iscc": 1
         },
         "Kota Batu": {
-            "color": "9eff72",
+            "color": "ed0076",
             "vscc": 16,
             "iscc": 1
         },
         "Sambas": {
-            "color": "a10002",
+            "color": "c99b73",
             "vscc": 16,
             "iscc": 1
         },
         "Banjarmasin": {
-            "color": "ff4b97",
+            "color": "bbcf6e",
             "vscc": 16,
             "iscc": 1
         },
         "Gulumoerrgin": {
-            "color": "d2ffbe",
+            "color": "a90307",
             "vscc": 16,
             "iscc": 1
         },
         "Hanoi": {
-            "color": "edc0ff",
+            "color": "08be00",
             "vscc": 16,
             "iscc": 1
         },
         "Formosa": {
-            "color": "67394c",
+            "color": "668eff",
             "vscc": 16,
             "iscc": 1
         },
         "Okinawa": {
-            "color": "881c2f",
+            "color": "878fff",
             "vscc": 16,
             "iscc": 1
         },
         "Amami": {
-            "color": "c1006a",
+            "color": "00784b",
             "vscc": 16,
             "iscc": 1
         },
         "Ainu": {
-            "color": "92007b",
+            "color": "9a4f00",
             "vscc": 16,
             "iscc": 1
         },
         "Nivikhs": {
-            "color": "e8ff84",
+            "color": "bb8500",
             "vscc": 16,
             "iscc": 1
         },
         "Evens": {
-            "color": "ff4279",
+            "color": "ffac3a",
             "vscc": 16,
             "iscc": 1
         },
         "Koryaks": {
-            "color": "ef0045",
+            "color": "51561e",
             "vscc": 16,
             "iscc": 1
         },
         "Hanyang": {
-            "color": "ffa464",
+            "color": "b59000",
             "vscc": 16,
             "iscc": 1
         },
         "Pyeongyang": {
-            "color": "6995ff",
+            "color": "3fddb8",
             "vscc": 16,
             "iscc": 1
         },
         "Fusan": {
-            "color": "bd0050",
+            "color": "00c4ff",
             "vscc": 16,
             "iscc": 1
         },
         "Plymouth": {
-            "color": "026800",
+            "color": "f2b797",
             "vscc": 16,
             "iscc": 1
         },
         "Ireland": {
-            "color": "ff6a67",
+            "color": "ff76cf",
             "vscc": 16,
             "iscc": 1
         },
         "Edinburgh": {
-            "color": "573a74",
+            "color": "ff283a",
             "vscc": 16,
             "iscc": 1
         },
         "Oxford": {
-            "color": "178600",
+            "color": "9bd58c",
             "vscc": 16,
             "iscc": 1
         },
         "Utrecht": {
-            "color": "ff5673",
+            "color": "ad8b5d",
             "vscc": 16,
             "iscc": 1
         },
         "Helsingfors": {
-            "color": "02e4a4",
+            "color": "7e415c",
             "vscc": 16,
             "iscc": 1
         },
         "Narva": {
-            "color": "0192de",
+            "color": "ff8f37",
             "vscc": 16,
             "iscc": 1
         },
         "Gothenburg": {
-            "color": "cdff6f",
+            "color": "e56c00",
             "vscc": 16,
             "iscc": 1
         },
         "Umea": {
-            "color": "6e391a",
+            "color": "f87bff",
             "vscc": 16,
             "iscc": 1
         },
         "Novgorod": {
-            "color": "b600ad",
+            "color": "c90028",
             "vscc": 16,
             "iscc": 1
         },
         "Obdorsk": {
-            "color": "889100",
+            "color": "006095",
             "vscc": 16,
             "iscc": 1
         },
         "Verkhoturye": {
-            "color": "ffcd27",
+            "color": "8a3267",
             "vscc": 16,
             "iscc": 1
         },
         "Irkutsk": {
-            "color": "77009f",
+            "color": "016cc9",
             "vscc": 16,
             "iscc": 1
         },
         "Tara": {
-            "color": "5e8e7d",
+            "color": "ff402e",
             "vscc": 16,
             "iscc": 1
         },
         "Krasnoyarsk": {
-            "color": "ff72d8",
+            "color": "9f2026",
             "vscc": 16,
             "iscc": 1
         },
         "Astrakhan": {
-            "color": "00ccc2",
+            "color": "7db0ff",
             "vscc": 16,
             "iscc": 1
         },
         "Yakutsk": {
-            "color": "9affb1",
+            "color": "ff8afc",
             "vscc": 16,
             "iscc": 1
         },
         "Arkhangelsk": {
-            "color": "7700eb",
+            "color": "4548a4",
             "vscc": 16,
             "iscc": 1
         },
         "Canaries": {
-            "color": "3830b4",
+            "color": "e9c338",
             "vscc": 16,
             "iscc": 1
         },
         "Azores": {
-            "color": "c56eff",
+            "color": "c8008e",
             "vscc": 16,
             "iscc": 1
         },
         "Rio de Janeiro": {
-            "color": "ff9fb6",
+            "color": "008d60",
             "vscc": 16,
             "iscc": 1
         },
         "Sao Paulo": {
-            "color": "ffaa34",
+            "color": "425a2a",
             "vscc": 16,
             "iscc": 1
         },
         "Bahia": {
-            "color": "a7ffe0",
+            "color": "7f3870",
             "vscc": 16,
             "iscc": 1
         },
         "Iceland": {
-            "color": "633e2e",
+            "color": "e3c27c",
             "vscc": 16,
             "iscc": 1
         },
         "Godthaab": {
-            "color": "5fff96",
+            "color": "781dbc",
             "vscc": 16,
             "iscc": 1
         },
         "Brattahlid": {
-            "color": "0178b5",
+            "color": "5e79ac",
             "vscc": 16,
             "iscc": 1
         },
         "St. Anthony": {
-            "color": "ff77a6",
+            "color": "f74e00",
             "vscc": 16,
             "iscc": 1
         },
         "Enticosty": {
-            "color": "ff8c97",
+            "color": "00cd8a",
             "vscc": 16,
             "iscc": 1
         },
         "Papinachois": {
-            "color": "b30030",
+            "color": "ff5193",
             "vscc": 16,
             "iscc": 1
         },
         "Salliq": {
-            "color": "c900b6",
+            "color": "8c82b7",
             "vscc": 16,
             "iscc": 1
         },
         "Chilcotin": {
-            "color": "cf8d00",
+            "color": "d5c784",
             "vscc": 16,
             "iscc": 1
         },
         "Dena'ina": {
-            "color": "f2002b",
+            "color": "01b44a",
             "vscc": 16,
             "iscc": 1
         },
         "Naskapi": {
-            "color": "00ffae",
+            "color": "cccc45",
             "vscc": 16,
             "iscc": 1
         },
         "Mohawk": {
-            "color": "01e260",
+            "color": "ff743e",
             "vscc": 16,
             "iscc": 1
         },
         "Seneca": {
-            "color": "ffaff5",
+            "color": "f00064",
             "vscc": 16,
             "iscc": 1
         },
         "Ojibwe": {
-            "color": "1d5219",
+            "color": "00bec3",
             "vscc": 16,
             "iscc": 1
         },
         "Catawba": {
-            "color": "aeffa0",
+            "color": "971679",
             "vscc": 16,
             "iscc": 1
         },
         "Cherokee": {
-            "color": "d4a2ff",
+            "color": "f0a8ff",
             "vscc": 16,
             "iscc": 1
         },
         "Chitimacha": {
-            "color": "00d96e",
+            "color": "01b787",
             "vscc": 16,
             "iscc": 1
         },
         "Apache": {
-            "color": "d5c9ff",
+            "color": "0188f0",
             "vscc": 16,
             "iscc": 1
         },
         "Porto": {
-            "color": "25496e",
+            "color": "74df18",
             "vscc": 16,
             "iscc": 1
         },
         "Gibraltar": {
-            "color": "ffa743",
+            "color": "9c195a",
             "vscc": 16,
             "iscc": 1
         },
         "Cebu": {
-            "color": "e03b00",
+            "color": "ddc656",
             "vscc": 16,
             "iscc": 1
         },
         "Manila": {
-            "color": "0165ac",
+            "color": "be3c00",
             "vscc": 16,
             "iscc": 1
         },
         "Valencia": {
-            "color": "83ff83",
+            "color": "a39aff",
             "vscc": 16,
             "iscc": 1
         },
         "Nantes": {
-            "color": "ff8079",
+            "color": "684e21",
             "vscc": 16,
             "iscc": 1
         },
         "Dijon": {
-            "color": "bdadff",
+            "color": "812e8c",
             "vscc": 16,
             "iscc": 1
         },
         "Marseille": {
-            "color": "ff62ff",
+            "color": "734a0e",
             "vscc": 16,
             "iscc": 1
         },
         "Barcelona": {
-            "color": "78320c",
+            "color": "ffb382",
             "vscc": 16,
             "iscc": 1
         },
         "Wilno": {
-            "color": "7373ff",
+            "color": "733a8c",
             "vscc": 16,
             "iscc": 1
         },
         "Krakow": {
-            "color": "ff5e47",
+            "color": "a1c5ff",
             "vscc": 16,
             "iscc": 1
         },
         "Gdansk": {
-            "color": "ffaaa1",
+            "color": "dd0037",
             "vscc": 16,
             "iscc": 1
         },
         "Kyiv": {
-            "color": "7a2851",
+            "color": "005983",
             "vscc": 16,
             "iscc": 1
         },
         "Makassar": {
-            "color": "bad0ad",
+            "color": "9700b2",
             "vscc": 16,
             "iscc": 1
         },
         "Manado": {
-            "color": "019a30",
+            "color": "008ee9",
             "vscc": 16,
             "iscc": 1
         },
         "Tadoussac": {
-            "color": "e9c300",
+            "color": "28548a",
             "vscc": 16,
             "iscc": 1
         },
         "Ville Marie": {
-            "color": "00966f",
+            "color": "ff4a3d",
             "vscc": 16,
             "iscc": 1
         },
         "Quebec": {
-            "color": "5a440a",
+            "color": "ff9db2",
             "vscc": 16,
             "iscc": 1
         },
         "Port Royal": {
-            "color": "9e8c00",
+            "color": "4d3aff",
             "vscc": 16,
             "iscc": 1
         },
         "Fort Detroit": {
-            "color": "ffd0bf",
+            "color": "27509a",
             "vscc": 16,
             "iscc": 1
         },
         "Quaqtaq": {
-            "color": "a90014",
+            "color": "b4af00",
             "vscc": 16,
             "iscc": 1
         },
         "Nome": {
-            "color": "a5d2ff",
+            "color": "61a1ff",
             "vscc": 16,
             "iscc": 1
         },
         "Kuujjuaq": {
-            "color": "c8ffa5",
+            "color": "cc7200",
             "vscc": 16,
             "iscc": 1
         },
         "Bogota": {
-            "color": "92ff67",
+            "color": "821ea9",
             "vscc": 16,
             "iscc": 1
         },
         "Lima": {
-            "color": "ffe43b",
+            "color": "ff4662",
             "vscc": 16,
             "iscc": 1
         },
         "Quito": {
-            "color": "800582",
+            "color": "80412f",
             "vscc": 16,
             "iscc": 1
         },
         "Buenos Aires": {
-            "color": "e301bf",
+            "color": "8a7500",
             "vscc": 16,
             "iscc": 1
         },
         "Panama": {
-            "color": "ff5e30",
+            "color": "ffa090",
             "vscc": 16,
             "iscc": 1
         },
         "Saltillo": {
-            "color": "01d64e",
+            "color": "0147ff",
             "vscc": 16,
             "iscc": 1
         },
         "Shoshone": {
-            "color": "ffcf8b",
+            "color": "ff417f",
             "vscc": 16,
             "iscc": 1
         },
         "Yokuts": {
-            "color": "d5ffe0",
+            "color": "ff995f",
             "vscc": 16,
             "iscc": 1
         },
         "Paiute": {
-            "color": "295027",
+            "color": "383dcc",
             "vscc": 16,
             "iscc": 1
         },
         "Miwok": {
-            "color": "cbc200",
+            "color": "ff66b3",
             "vscc": 16,
             "iscc": 1
         },
         "Sahtu": {
-            "color": "e167ff",
+            "color": "a80a19",
             "vscc": 16,
             "iscc": 1
         },
         "Tsuu T'ina": {
-            "color": "832803",
+            "color": "bf7a00",
             "vscc": 16,
             "iscc": 1
         },
         "Tlicho": {
-            "color": "e0009a",
+            "color": "970788",
             "vscc": 16,
             "iscc": 1
         },
         "Mexico City": {
-            "color": "ffb16c",
+            "color": "ffb55d",
             "vscc": 16,
             "iscc": 1
         },
         "Nueva Vizcaya": {
-            "color": "9a0055",
+            "color": "00ba66",
             "vscc": 16,
             "iscc": 1
         },
         "Naples": {
-            "color": "fd70ff",
+            "color": "00d84c",
             "vscc": 16,
             "iscc": 1
         },
         "Sicily": {
-            "color": "9a4000",
+            "color": "df006e",
             "vscc": 16,
             "iscc": 1
         },
         "Tangier": {
-            "color": "1e00fa",
+            "color": "61e04a",
             "vscc": 16,
             "iscc": 1
         },
         "Baleares": {
-            "color": "57ffbd",
+            "color": "d84300",
             "vscc": 16,
             "iscc": 1
         },
         "Marrakech": {
-            "color": "ff3545",
+            "color": "7e440c",
             "vscc": 16,
             "iscc": 1
         },
         "Idjil": {
-            "color": "e6ff70",
+            "color": "fc00b8",
             "vscc": 16,
             "iscc": 1
         },
         "Timbuktu": {
-            "color": "01b1e2",
+            "color": "01a8d9",
             "vscc": 16,
             "iscc": 1
         },
         "Mali": {
-            "color": "314f0f",
+            "color": "99b6ff",
             "vscc": 16,
             "iscc": 1
         },
         "Ouagadougou": {
-            "color": "aa0085",
+            "color": "952b47",
             "vscc": 16,
             "iscc": 1
         },
         "Oualata": {
-            "color": "00c7d2",
+            "color": "b3d261",
             "vscc": 16,
             "iscc": 1
         },
         "Niani": {
-            "color": "ff99c5",
+            "color": "902d5c",
             "vscc": 16,
             "iscc": 1
         },
         "Sao Tome": {
-            "color": "017b9e",
+            "color": "ff414f",
             "vscc": 16,
             "iscc": 1
         },
         "Mpondo": {
-            "color": "5bffcd",
+            "color": "00732b",
             "vscc": 16,
             "iscc": 1
         },
         "Arguin": {
-            "color": "0282ce",
+            "color": "2d6442",
             "vscc": 16,
             "iscc": 1
         },
         "Cape Khoe": {
-            "color": "ffee94",
+            "color": "d30075",
             "vscc": 16,
             "iscc": 1
         },
         "Sakalava": {
-            "color": "01c20b",
+            "color": "ee60ff",
             "vscc": 16,
             "iscc": 1
         },
         "Bara": {
-            "color": "01c9ee",
+            "color": "bd7c9a",
             "vscc": 16,
             "iscc": 1
         },
         "Aden": {
-            "color": "ab006a",
+            "color": "ffa7c5",
             "vscc": 16,
             "iscc": 1
         },
         "Warsangali": {
-            "color": "41fffe",
+            "color": "943800",
             "vscc": 16,
             "iscc": 1
         },
         "Sanaa": {
-            "color": "800096",
+            "color": "ff98f2",
             "vscc": 16,
             "iscc": 1
         },
         "Mahra": {
-            "color": "7c2b36",
+            "color": "ca9bff",
             "vscc": 16,
             "iscc": 1
         },
         "Zanzibar": {
-            "color": "4bef00",
+            "color": "c39bcb",
             "vscc": 16,
             "iscc": 1
         },
         "Bunyoro": {
-            "color": "ff39a2",
+            "color": "c545ff",
             "vscc": 16,
             "iscc": 1
         },
         "Burundi": {
-            "color": "b70076",
+            "color": "bab0ff",
             "vscc": 16,
             "iscc": 1
         },
         "Delagoa": {
-            "color": "cc7f00",
+            "color": "dda0c5",
             "vscc": 16,
             "iscc": 1
         },
         "Riyadh": {
-            "color": "7b255d",
+            "color": "ffa95f",
             "vscc": 16,
             "iscc": 1
         },
         "Rustaq": {
-            "color": "ed4eff",
+            "color": "7a3981",
             "vscc": 16,
             "iscc": 1
         },
         "Qeshm": {
-            "color": "8b7000",
+            "color": "2d5291",
             "vscc": 16,
             "iscc": 1
         },
         "Nuremberg": {
-            "color": "9ea800",
+            "color": "9c5a72",
             "vscc": 16,
             "iscc": 1
         },
         "Brandenburg": {
-            "color": "006353",
+            "color": "00d479",
             "vscc": 16,
             "iscc": 1
         },
         "Lubeck": {
-            "color": "64346e",
+            "color": "8e1399",
             "vscc": 16,
             "iscc": 1
         },
         "Bremen": {
-            "color": "53f4ff",
+            "color": "ff9a9a",
             "vscc": 16,
             "iscc": 1
         },
         "Kiel": {
-            "color": "9d2f00",
+            "color": "ff6600",
             "vscc": 16,
             "iscc": 1
         },
         "Copenhagen": {
-            "color": "ffe0b9",
+            "color": "b30092",
             "vscc": 16,
             "iscc": 1
         },
         "Konigsberg": {
-            "color": "cc6300",
+            "color": "008377",
             "vscc": 16,
             "iscc": 1
         },
         "Trondheim": {
-            "color": "433994",
+            "color": "853e20",
             "vscc": 16,
             "iscc": 1
         },
         "Spitsbergen": {
-            "color": "a0002b",
+            "color": "985fff",
             "vscc": 16,
             "iscc": 1
         },
         "Ghent": {
-            "color": "ffce51",
+            "color": "8f8400",
             "vscc": 16,
             "iscc": 1
         },
         "Luxembourg": {
-            "color": "8d0f33",
+            "color": "64510a",
             "vscc": 16,
             "iscc": 1
         },
         "Freiburg": {
-            "color": "00aeaf",
+            "color": "c400f6",
             "vscc": 16,
             "iscc": 1
         },
         "Strasbourg": {
-            "color": "93c9ff",
+            "color": "ffb0b7",
             "vscc": 16,
             "iscc": 1
         },
         "Venice": {
-            "color": "efff3d",
+            "color": "b50058",
             "vscc": 16,
             "iscc": 1
         },
         "Split": {
-            "color": "5e3b60",
+            "color": "ff4db8",
             "vscc": 16,
             "iscc": 1
         },
         "Rome": {
-            "color": "ffbeac",
+            "color": "f4bd67",
             "vscc": 16,
             "iscc": 1
         },
         "Florence": {
-            "color": "00fc9a",
+            "color": "8c277d",
             "vscc": 16,
             "iscc": 1
         },
         "Targoviste": {
-            "color": "995300",
+            "color": "98ac00",
             "vscc": 16,
             "iscc": 1
         },
         "Ochakiv": {
-            "color": "00f145",
+            "color": "01978b",
             "vscc": 16,
             "iscc": 1
         },
         "Bakchisarai": {
-            "color": "0083e2",
+            "color": "8c363d",
             "vscc": 16,
             "iscc": 1
         },
         "Tbilisi": {
-            "color": "006ec2",
+            "color": "cb00b8",
             "vscc": 16,
             "iscc": 1
         },
         "Jassy": {
-            "color": "5d55ff",
+            "color": "f88f00",
             "vscc": 16,
             "iscc": 1
         },
         "Corse": {
-            "color": "00734b",
+            "color": "ff5db7",
             "vscc": 16,
             "iscc": 1
         },
         "Sardinia": {
-            "color": "5cff71",
+            "color": "6f407f",
             "vscc": 16,
             "iscc": 1
         },
         "Athens": {
-            "color": "ff8fd6",
+            "color": "62b200",
             "vscc": 16,
             "iscc": 1
         },
         "Sarajevo": {
-            "color": "00a850",
+            "color": "9c2143",
             "vscc": 16,
             "iscc": 1
         },
         "Smyrna": {
-            "color": "ffb18d",
+            "color": "ab3b00",
             "vscc": 16,
             "iscc": 1
         },
         "Baghdad": {
-            "color": "6d5573",
+            "color": "9f0c61",
             "vscc": 16,
             "iscc": 1
         },
         "Trebizond": {
-            "color": "2829c9",
+            "color": "7578ff",
             "vscc": 16,
             "iscc": 1
         },
         "Cairo": {
-            "color": "c42cff",
+            "color": "e8aa00",
             "vscc": 16,
             "iscc": 1
         },
         "Mecca": {
-            "color": "01b51c",
+            "color": "91a671",
             "vscc": 16,
             "iscc": 1
         },
         "Tripoli": {
-            "color": "73e200",
+            "color": "ab80ff",
             "vscc": 16,
             "iscc": 1
         },
         "Tunis": {
-            "color": "88b100",
+            "color": "efb3eb",
             "vscc": 16,
             "iscc": 1
         },
         "Hohhot": {
-            "color": "e4ffcf",
+            "color": "ff7ab5",
             "vscc": 16,
             "iscc": 1
         },
         "Hailanpao": {
-            "color": "964fff",
+            "color": "c50043",
             "vscc": 16,
             "iscc": 1
         },
         "Qiqihar": {
-            "color": "c38bff",
+            "color": "ff251d",
             "vscc": 16,
             "iscc": 1
         },
         "Haishenwai": {
-            "color": "019ebe",
+            "color": "882297",
             "vscc": 16,
             "iscc": 1
         },
         "Sahaliyan": {
-            "color": "ff9331",
+            "color": "bb5cff",
             "vscc": 16,
             "iscc": 1
         },
         "Debre Birhan": {
-            "color": "99c1ff",
+            "color": "31e277",
             "vscc": 16,
             "iscc": 1
         },
         "Aksum": {
-            "color": "edb3ff",
+            "color": "ff6524",
             "vscc": 16,
             "iscc": 1
         },
         "Mek'ele": {
-            "color": "919fff",
+            "color": "f933ff",
             "vscc": 16,
             "iscc": 1
         },
         "Yupik": {
-            "color": "936d84",
+            "color": "83a9dd",
             "vscc": 16,
             "iscc": 1
         },
         "Trieste": {
-            "color": "0141d6",
+            "color": "ff52de",
             "vscc": 16,
             "iscc": 1
         },
         "Innsbruck": {
-            "color": "f9ffad",
+            "color": "943022",
             "vscc": 16,
             "iscc": 1
         },
         "Rabat": {
-            "color": "4ac000",
+            "color": "dc0001",
             "vscc": 16,
             "iscc": 1
         },
         "Shache": {
-            "color": "0058cb",
+            "color": "0274e3",
             "vscc": 16,
             "iscc": 1
         },
         "Derbent": {
-            "color": "00755f",
+            "color": "c8ce19",
             "vscc": 16,
             "iscc": 1
         },
         "Bukhara": {
-            "color": "ff0ed9",
+            "color": "215e30",
             "vscc": 16,
             "iscc": 1
         },
         "Khiva": {
-            "color": "d7c200",
+            "color": "ff88b6",
             "vscc": 16,
             "iscc": 1
         },
         "Turkestan": {
-            "color": "caff86",
+            "color": "cd0059",
             "vscc": 16,
             "iscc": 1
         },
         "Sao Sebastiao": {
-            "color": "7c4400",
+            "color": "0290e2",
             "vscc": 16,
             "iscc": 1
         },
         "St. Domingo": {
-            "color": "c54500",
+            "color": "325dff",
             "vscc": 16,
             "iscc": 1
         },
         "Jamaica": {
-            "color": "ffca78",
+            "color": "95d947",
             "vscc": 16,
             "iscc": 1
         },
         "Baracoa": {
-            "color": "4f5000",
+            "color": "9406ff",
             "vscc": 16,
             "iscc": 1
         },
         "Havana": {
-            "color": "01876f",
+            "color": "ff7f9d",
             "vscc": 16,
             "iscc": 1
         },
         "Puerto Rico": {
-            "color": "ff4421",
+            "color": "b66dff",
             "vscc": 16,
             "iscc": 1
         },
         "Barbados": {
-            "color": "fffa64",
+            "color": "0159bb",
             "vscc": 16,
             "iscc": 1
         },
         "Macao": {
-            "color": "6f8300",
+            "color": "7754ff",
             "vscc": 16,
             "iscc": 1
         },
         "Timor": {
-            "color": "e58dff",
+            "color": "01886e",
             "vscc": 16,
             "iscc": 1
         },
         "Wurruk": {
-            "color": "3536a9",
+            "color": "008c56",
             "vscc": 16,
             "iscc": 1
         },
         "Paris": {
-            "color": "702a70",
+            "color": "a89000",
             "vscc": 16,
             "iscc": 1
         },
         "London": {
-            "color": "8b0061",
+            "color": "ff91da",
             "vscc": 16,
             "iscc": 1
         },
         "Amsterdam": {
-            "color": "01756d",
+            "color": "4d94ff",
             "vscc": 16,
             "iscc": 1
         },
         "Stockholm": {
-            "color": "ff4eac",
+            "color": "ffb634",
             "vscc": 16,
             "iscc": 1
         },
         "Warsaw": {
-            "color": "96f1ff",
+            "color": "00af93",
             "vscc": 16,
             "iscc": 1
         },
         "Ishahan": {
-            "color": "ff5256",
+            "color": "953dff",
             "vscc": 16,
             "iscc": 1
         },
         "Constantinople": {
-            "color": "b39e00",
+            "color": "566395",
             "vscc": 16,
             "iscc": 1
         },
         "Moscow": {
-            "color": "00df8f",
+            "color": "de3100",
             "vscc": 16,
             "iscc": 1
         },
         "Vienna": {
-            "color": "f000e4",
+            "color": "867bff",
             "vscc": 16,
             "iscc": 1
         },
         "Madrid": {
-            "color": "f587ff",
+            "color": "7f5000",
             "vscc": 16,
             "iscc": 1
         },
         "Lisbon": {
-            "color": "ff69ad",
+            "color": "a600d8",
             "vscc": 16,
             "iscc": 1
         },
         "Xining": {
-            "color": "ff4789",
+            "color": "2b9300",
             "vscc": 16,
             "iscc": 1
         },
         "Yarkand": {
-            "color": "fff3ba",
+            "color": "ff7422",
             "vscc": 16,
             "iscc": 1
         },
         "Uzgen": {
-            "color": "4c481e",
+            "color": "4f7700",
             "vscc": 16,
             "iscc": 1
         },
         "Ikh Khuree": {
-            "color": "00e1e7",
+            "color": "737400",
             "vscc": 16,
             "iscc": 1
         },
         "Turfan": {
-            "color": "861457",
+            "color": "019c98",
             "vscc": 16,
             "iscc": 1
         },
         "Karakorum": {
-            "color": "72352a",
+            "color": "274ab1",
             "vscc": 16,
             "iscc": 1
         },
         "Chukchis": {
-            "color": "00df15",
+            "color": "3cce00",
             "vscc": 16,
             "iscc": 1
         },
         "Kinshasa": {
-            "color": "7b6300",
+            "color": "5e2ad0",
             "vscc": 16,
             "iscc": 1
         },
         "Delhi": {
-            "color": "de004d",
+            "color": "ffa706",
             "vscc": 16,
             "iscc": 1
         },
         "Ayutthaya": {
-            "color": "ffba82",
+            "color": "ffb296",
             "vscc": 16,
             "iscc": 1
         },
         "Tutchone": {
-            "color": "006a91",
+            "color": "8ed6a8",
             "vscc": 16,
             "iscc": 1
         },
         "Aleuts": {
-            "color": "eb2400",
+            "color": "acb5ed",
             "vscc": 16,
             "iscc": 1
         },
         "Cree": {
-            "color": "ff688b",
+            "color": "ff87e4",
             "vscc": 16,
             "iscc": 1
         },
         "Oji-Cree": {
-            "color": "5fcfff",
+            "color": "ff83f2",
             "vscc": 16,
             "iscc": 1
         },
         "Beijing": {
-            "color": "c10028",
+            "color": "b6d253",
             "vscc": 16,
             "iscc": 1
         },
         "Shengjing": {
-            "color": "005314",
+            "color": "986f00",
             "vscc": 16,
             "iscc": 1
         },
         "Kyoto": {
-            "color": "019a4c",
+            "color": "e78f00",
             "vscc": 16,
             "iscc": 1
         },
         "Gondar": {
-            "color": "ffce41",
+            "color": "947849",
             "vscc": 16,
             "iscc": 1
         },
         "Mareeg": {
-            "color": "628e00",
+            "color": "5ce12c",
             "vscc": 16,
             "iscc": 1
         },
         "Tehuelche": {
-            "color": "7d00ae",
+            "color": "73349c",
             "vscc": 16,
             "iscc": 1
         },
         "Chuyma": {
-            "color": "ff7952",
+            "color": "cbaade",
             "vscc": 16,
             "iscc": 1
         },
         "Chipewyan": {
-            "color": "6b6100",
+            "color": "4c4997",
             "vscc": 16,
             "iscc": 1
         },
         "Gosiute": {
-            "color": "ff58c7",
+            "color": "0177f1",
             "vscc": 16,
             "iscc": 1
         },
         "Iqaluit": {
-            "color": "008b41",
+            "color": "5d74ff",
             "vscc": 16,
             "iscc": 1
         },
         "Kolkata": {
-            "color": "7facff",
+            "color": "00a42c",
             "vscc": 16,
             "iscc": 1
         },
         "Akwa'ala": {
-            "color": "7d80ff",
+            "color": "fface5",
             "vscc": 16,
             "iscc": 1
         },
         "Arapaho": {
-            "color": "ffc9d8",
+            "color": "ff5c3a",
             "vscc": 16,
             "iscc": 1
         },
         "Lakota": {
-            "color": "3b3e8c",
+            "color": "6f6500",
             "vscc": 16,
             "iscc": 1
         },
         "Missouri": {
-            "color": "006975",
+            "color": "7b4830",
             "vscc": 16,
             "iscc": 1
         },
         "Ioway": {
-            "color": "ffb8dc",
+            "color": "ff54a1",
             "vscc": 16,
             "iscc": 1
         },
         "Hausa States": {
-            "color": "56e8ff",
+            "color": "72dd6b",
             "vscc": 16,
             "iscc": 1
         },
         "Agadez": {
-            "color": "00a094",
+            "color": "b891ff",
             "vscc": 16,
             "iscc": 1
         },
         "Darfur": {
-            "color": "a3ffc2",
+            "color": "02ce58",
             "vscc": 16,
             "iscc": 1
         },
         "Azande": {
-            "color": "d8000e",
+            "color": "719200",
             "vscc": 16,
             "iscc": 1
         },
         "Ndakaaru": {
-            "color": "004a8e",
+            "color": "b06a6c",
             "vscc": 16,
             "iscc": 1
         },
         "St. Louis": {
-            "color": "ff978a",
+            "color": "c7000b",
             "vscc": 16,
             "iscc": 1
         },
         "Banda": {
-            "color": "00eb0d",
+            "color": "885e89",
             "vscc": 16,
             "iscc": 1
         },
         "Hawwara": {
-            "color": "a35f00",
+            "color": "77a8ff",
             "vscc": 16,
             "iscc": 1
         },
         "Mandara": {
-            "color": "60411a",
+            "color": "80d6c0",
             "vscc": 16,
             "iscc": 1
         },
         "Benin": {
-            "color": "6603b6",
+            "color": "5e5600",
             "vscc": 16,
             "iscc": 1
         },
         "Barotse": {
-            "color": "5223b3",
+            "color": "3d5b11",
             "vscc": 16,
             "iscc": 1
         },
         "Pressburg": {
-            "color": "009312",
+            "color": "ff7f8a",
             "vscc": 16,
             "iscc": 1
         }
        }
+    
+    
     
 }

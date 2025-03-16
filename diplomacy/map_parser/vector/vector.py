@@ -68,14 +68,15 @@ class Parser:
         logger.debug("map_parser.vector.parse.start")
         start = time.time()
 
-        players = set()
+        self.players = set()
         for name, data in self.data["players"].items():
             color = data["color"]
             vscc = data["vscc"]
             iscc = data["iscc"]
             player = Player(name, color, vscc, iscc, set(), set())
-            players.add(player)
+            self.players.add(player)
             self.color_to_player[color] = player
+
 
         self.color_to_player[self.data["svg config"]["neutral"]] = None
         self.color_to_player[self.data["svg config"]["neutral_sc"]] = None
@@ -123,7 +124,7 @@ class Parser:
                     coast.retreat_unit_coordinate = (0, 0)
 
 
-        return Board(players, provinces, units, phase.initial(), self.data, self.datafile)
+        return Board(self.players, provinces, units, phase._winter_builds, self.data, self.datafile)
 
     def read_map(self) -> tuple[set[Province], set[tuple[str, str]]]:
         if self.cache_provinces is None:
@@ -341,7 +342,8 @@ class Parser:
     def _initialize_province_owners(self, provinces_layer: Element) -> None:
         for province_data in provinces_layer.getchildren():
             name = self._get_province_name(province_data)
-            self.name_to_province[name].owner = get_player(province_data, self.color_to_player)
+            self.name_to_province[name].owner = next((player for player in self.players if player.name.lower() == name.lower()), None)
+            # self.name_to_province[name].owner = get_player(province_data, self.color_to_player)
 
     # Sets province names given the names layer
     def _initialize_province_names(self, provinces: set[Province]) -> None:
@@ -356,24 +358,392 @@ class Parser:
         initialize_province_resident_data(provinces, self.names_layer.getchildren(), get_coordinates, set_province_name)
 
     def _initialize_supply_centers_assisted(self) -> None:
-        for center_data in self.centers_layer.getchildren():
-            name = self._get_province_name(center_data)
-            province = self.name_to_province[name]
+        import random
+        r = lambda: random.randint(0,255)
+        s = ["#5ce12c",
+"#9406ff",
+"#3cce00",
+"#7b00ec",
+"#74df18",
+"#222df0",
+"#08be00",
+"#c400f6",
+"#00d84c",
+"#4d3aff",
+"#78d100",
+"#0147ff",
+"#61e04a",
+"#953dff",
+"#01df6a",
+"#e500ec",
+"#02ce58",
+"#f933ff",
+"#009e06",
+"#fb00e8",
+"#31e277",
+"#a600d8",
+"#62b200",
+"#7017ce",
+"#abd52a",
+"#5e2ad0",
+"#80b700",
+"#c545ff",
+"#00a42c",
+"#ff32ec",
+"#60df6a",
+"#9900c9",
+"#95d947",
+"#7754ff",
+"#b0c400",
+"#3839d4",
+"#c8ce19",
+"#325dff",
+"#afd437",
+"#d100d1",
+"#01b44a",
+"#e353ff",
+"#2b9300",
+"#bb5cff",
+"#72dd6b",
+"#781dbc",
+"#d2cb27",
+"#0246d9",
+"#d0bb00",
+"#4165ff",
+"#98ac00",
+"#5c30c7",
+"#00d479",
+"#fc00b8",
+"#00ba66",
+"#ee60ff",
+"#007e1a",
+"#985fff",
+"#86a500",
+"#383dcc",
+"#b4af00",
+"#9700b2",
+"#64de7e",
+"#cb00b8",
+"#45df94",
+"#e200b8",
+"#00cd8a",
+"#ff52de",
+"#01aa5b",
+"#d100a2",
+"#42dea8",
+"#ff1a9d",
+"#009247",
+"#ff63e9",
+"#4f8300",
+"#b66dff",
+"#719200",
+"#906dff",
+"#e8aa00",
+"#0050d4",
+"#ffa706",
+"#0066e9",
+"#f88f00",
+"#5d74ff",
+"#e9c338",
+"#1749bb",
+"#cccc45",
+"#821ea9",
+"#b6d253",
+"#6834b1",
+"#b3d261",
+"#4f3fb6",
+"#ffb634",
+"#0177f1",
+"#ff6600",
+"#005fd4",
+"#e78f00",
+"#7578ff",
+"#d09a00",
+"#867bff",
+"#7d8e00",
+"#cf74ff",
+"#377300",
+"#f87bff",
+"#4f7700",
+"#b2009c",
+"#7cda8d",
+"#8e1399",
+"#c9cc60",
+"#4e42af",
+"#ffac3a",
+"#6d81ff",
+"#f74e00",
+"#0274e3",
+"#f4000f",
+"#00c4ff",
+"#ff251d",
+"#3fddb8",
+"#dc0001",
+"#3dd8ed",
+"#de3100",
+"#0188f0",
+"#e56c00",
+"#4d94ff",
+"#ff7422",
+"#0159bb",
+"#ff6524",
+"#008ee9",
+"#d84300",
+"#668eff",
+"#b59000",
+"#ab80ff",
+"#a89000",
+"#274ab1",
+"#f6bd4a",
+"#882297",
+"#01ad77",
+"#ff50c7",
+"#00732b",
+"#ff78f2",
+"#285f03",
+"#ff8afc",
+"#076026",
+"#ff4db8",
+"#01b787",
+"#ed0076",
+"#69dba9",
+"#b30092",
+"#008c56",
+"#c8008e",
+"#00c6b4",
+"#ff283a",
+"#00bec3",
+"#ff402e",
+"#0290e2",
+"#c7000b",
+"#0196e3",
+"#ff4a3d",
+"#00af93",
+"#f00064",
+"#008d60",
+"#ff5fcb",
+"#00784b",
+"#ff83f2",
+"#8f8400",
+"#878fff",
+"#bb8500",
+"#016cc9",
+"#ff8f37",
+"#017dce",
+"#ff5c3a",
+"#01a8d9",
+"#cd0024",
+"#63c7ff",
+"#a90307",
+"#61a1ff",
+"#cc7200",
+"#4548a4",
+"#ddc656",
+"#73349c",
+"#bbcf6e",
+"#970788",
+"#9bd58c",
+"#a30085",
+"#8ed6a8",
+"#ae0081",
+"#737400",
+"#f493ff",
+"#3d5b11",
+"#d493ff",
+"#8a7500",
+"#b891ff",
+"#bf7a00",
+"#a39aff",
+"#c86300",
+"#77a8ff",
+"#be3c00",
+"#7db0ff",
+"#ab3b00",
+"#007abd",
+"#ff743e",
+"#005f9e",
+"#ff414f",
+"#02aab9",
+"#dd0037",
+"#019c98",
+"#c90028",
+"#01978b",
+"#df006e",
+"#01886e",
+"#d30075",
+"#006743",
+"#ff5db7",
+"#215e30",
+"#ff54a1",
+"#145e3e",
+"#ff417f",
+"#008377",
+"#da005b",
+"#80d6c0",
+"#cd0059",
+"#00705d",
+"#ff4662",
+"#0085b5",
+"#a80a19",
+"#8ac7ff",
+"#a95400",
+"#b0a5ff",
+"#986f00",
+"#ca9bff",
+"#656500",
+"#ff87e4",
+"#355c22",
+"#ff76cf",
+"#6f6500",
+"#ff98f2",
+"#5e5600",
+"#f0a8ff",
+"#866000",
+"#27509a",
+"#ffb55d",
+"#4c4997",
+"#f4bd67",
+"#812e8c",
+"#c1cd83",
+"#971679",
+"#e9c171",
+"#733a8c",
+"#ffa95f",
+"#2d5291",
+"#ff8251",
+"#006095",
+"#ff995f",
+"#28548a",
+"#ff7161",
+"#005983",
+"#c50043",
+"#5da284",
+"#ba0071",
+"#2d6442",
+"#ff5193",
+"#425a2a",
+"#ff66b3",
+"#51561e",
+"#ff91da",
+"#735600",
+"#bab0ff",
+"#9a4f00",
+"#99b6ff",
+"#943800",
+"#a1c5ff",
+"#8f3610",
+"#c1c0ff",
+"#7f5000",
+"#dcb2ff",
+"#64510a",
+"#ebb1fe",
+"#734a0e",
+"#acb5ed",
+"#9f2026",
+"#83a9dd",
+"#a60832",
+"#91a671",
+"#8c277d",
+"#d5c784",
+"#9f0c61",
+"#c6c58c",
+"#b50058",
+"#e3c27c",
+"#7a3981",
+"#f0bd81",
+"#6f407f",
+"#ffb382",
+"#5e4881",
+"#ff987b",
+"#514d80",
+"#ff7075",
+"#5e79ac",
+"#ff5487",
+"#566395",
+"#7e440c",
+"#efb3eb",
+"#684e21",
+"#fface5",
+"#734924",
+"#ff7ab5",
+"#947849",
+"#8e2971",
+"#f2b797",
+"#9c195a",
+"#ad8b5d",
+"#7f3870",
+"#ffb296",
+"#734072",
+"#c99b73",
+"#8a3267",
+"#ffa090",
+"#8c82b7",
+"#943022",
+"#cbaade",
+"#853e20",
+"#c39bcb",
+"#a6023e",
+"#dda0c5",
+"#7b4830",
+"#ff97cc",
+"#80412f",
+"#ff88b6",
+"#883b32",
+"#ffa7c5",
+"#9c2143",
+"#ffb0b7",
+"#902d5c",
+"#ff877e",
+"#885e89",
+"#ff6a8a",
+"#b285b2",
+"#8c363d",
+"#ff9db2",
+"#7e415c",
+"#ff9a9a",
+"#843a55",
+"#ff7f8a",
+"#8f3052",
+"#b57a62",
+"#ff7f9d",
+"#952b47",
+"#bd7c9a",
+"#b06a6c",
+"#9c5a72"]
+        i = 0
+        z = [i for i in range(len(s))]
+        random.shuffle(z)
+        i = 0
+        with open(f"config/impdip1.1_players.json", "w+") as f:
+            f.write('   "players": {\n')
+            for center_data in self.centers_layer.getchildren():
+                name = self._get_province_name(center_data)
+                province = self.name_to_province[name]
 
-            if province.has_supply_center:
-                raise RuntimeError(f"{name} already has a supply center")
-            province.has_supply_center = True
+                x = '%02x%02x%02x' % (r(),r(),r())
+                f.write(f'    \"{name}\": {'{'}\n')
+                f.write(f'        "color": "{s[z[i]][1:]}",\n')
+                f.write(f'        "vscc": 16,\n')
+                f.write(f'        "iscc": 1\n')
+                f.write(f'    {'}'},\n')
 
-            owner = province.owner
-            if owner:
-                owner.centers.add(province)
+                i += 1
 
-            # TODO: (BETA): we cheat assume core = owner if exists because capital center symbols work different
-            core = province.owner
-            # if not core:
-            #     core_data = center_data.findall(".//svg:circle", namespaces=NAMESPACE)[1]
-            #     core = get_player(core_data, self.color_to_player)
-            province.core = core
+                if province.has_supply_center:
+                    raise RuntimeError(f"{name} already has a supply center")
+                province.has_supply_center = True
+
+                owner = province.owner
+                if owner:
+                    owner.centers.add(province)
+
+                # TODO: (BETA): we cheat assume core = owner if exists because capital center symbols work different
+                core = province.owner
+                # if not core:
+                #     core_data = center_data.findall(".//svg:circle", namespaces=NAMESPACE)[1]
+                #     core = get_player(core_data, self.color_to_player)
+                province.core = core
+            f.write("   }\n")
 
     # Sets province supply center values
     def _initialize_supply_centers(self, provinces: set[Province]) -> None:
@@ -412,10 +782,11 @@ class Parser:
         if not coast and unit_type == UnitType.FLEET:
             coast = next((coast for coast in province.coasts), None)
 
-        unit = Unit(unit_type, player, province, coast, None)
-        province.unit = unit
-        unit.player.units.add(unit)
-        return unit
+        # unit = Unit(unit_type, player, province, coast, None)
+        # province.unit = unit
+        # unit.player.units.add(unit)
+        # return unit
+
 
     def _initialize_units_assisted(self) -> None:
         for unit_data in self.units_layer.getchildren():

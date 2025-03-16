@@ -13,6 +13,7 @@ import math
 # from diplomacy.map_parser.vector import config_svg as svgcfg
 
 from diplomacy.map_parser.vector.utils import get_element_color, get_svg_element, get_unit_coordinates
+from diplomacy.map_parser.vector.vector import NAMESPACE
 from diplomacy.persistence import phase
 from diplomacy.persistence.board import Board
 from diplomacy.persistence.db.database import logger
@@ -160,11 +161,19 @@ class Mapper:
         """
         all_power_banners_element = get_svg_element(svg.getroot(), self.board.data["svg config"]["power_banners"])
         for i, player in enumerate(self.board.get_players_by_score()):
+            if i >= len(self.scoreboard_power_locations):
+                break
             for power_element in all_power_banners_element:
                 # match the correct svg element based on the color of the rectangle
-                if get_element_color(power_element[0]) == player.color:
+                if power_element.get("transform") == self.scoreboard_power_locations[i]:
+                    self.color_element(power_element[0], player.color)
+                    power_element[1][0].text = player.name
+
                     power_element.set("transform", self.scoreboard_power_locations[i])
                     power_element[5][0].text = str(len(player.centers))
+                    power_element[6][0].text = "16"
+                    power_element[7][0].text = "1"
+
                     break
 
     def _draw_side_panel_date(self, svg: ElementTree) -> None:
